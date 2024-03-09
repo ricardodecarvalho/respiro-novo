@@ -5,12 +5,14 @@ import './assets/css/App.css';
 
 import { counters, errors } from './utils';
 import ErrorBoundary from './utils/errors/ErrorBoundary/ErrorBoundary';
-import JourneyCard from './components/JourneyCard';
-import DaysWithoutSmoking from './components/DaysWithoutSmoking';
-import CigarettesNotSmoked from './components/CigarettesNotSmoked';
-import MoneySaved from './components/MoneySaved';
-import HealthBenefits from './components/HealthBenefits';
-import EnvironmentalBenefits from './components/EnvironmentalBenefits';
+import {
+  CigarettesNotSmoked,
+  DaysWithoutSmoking,
+  EnvironmentalBenefits,
+  HealthBenefits,
+  JourneyCard,
+  MoneySaved,
+} from './components';
 
 function App() {
   const daysWithoutSmoking = counters.daysBetween(new Date('2024-01-06'));

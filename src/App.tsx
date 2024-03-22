@@ -26,17 +26,15 @@ function App() {
       >
         <ErrorBoundary onError={errors.onErrorBoundary}>
           <Container size="4">
-            <Flex direction="column" gap="3" align="center">
+            <Flex direction="column" gap="3">
               <JourneyCard />
-              <Flex direction="column" gap="3">
-                <DaysWithoutSmoking daysWithoutSmoking={daysWithoutSmoking} />
-                <CigarettesNotSmoked daysWithoutSmoking={daysWithoutSmoking} />
-                <MoneySaved daysWithoutSmoking={daysWithoutSmoking} />
-                <HealthBenefits daysWithoutSmoking={daysWithoutSmoking} />
-                <EnvironmentalBenefits
-                  daysWithoutSmoking={daysWithoutSmoking}
-                />
-              </Flex>
+              <DaysWithoutSmoking daysWithoutSmoking={daysWithoutSmoking} />
+              <CigarettesNotSmoked daysWithoutSmoking={daysWithoutSmoking} />
+              <MoneySaved daysWithoutSmoking={daysWithoutSmoking} />
+              <HealthBenefits daysWithoutSmoking={daysWithoutSmoking} />
+              <EnvironmentalBenefits
+                daysWithoutSmoking={daysWithoutSmoking}
+              />
             </Flex>
           </Container>
         </ErrorBoundary>

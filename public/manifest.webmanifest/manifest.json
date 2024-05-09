@@ -1,0 +1,25 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "fullscreen",
+  "name": "Respiro Novo",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Respiro Novo",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
+  ],
+  "id": "respiro-novo.vercel.app",
+  "description": "\"Respiro Novo\" is your new friend app to record the date you smoked your last cigarette.",
+  "lang": "pt",
+  "categories": [
+    "fitness",
+    "health"
+  ]
+}

@@ -10,7 +10,6 @@ import { Info, User } from './components';
 
 function App() {
   const [cookies] = useCookies(['user']);
-  console.log(cookies.user);
   return (
     <>
       <Theme
@@ -23,7 +22,6 @@ function App() {
           <Container size="4" width="100%">
             <Flex direction="column" gap="3">
               {!cookies.user && <User />}
-
               {cookies.user && <Info userData={cookies.user} />}
             </Flex>
           </Container>

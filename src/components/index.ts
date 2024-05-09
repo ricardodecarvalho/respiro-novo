@@ -4,6 +4,8 @@ import CigarettesNotSmoked from './CigarettesNotSmoked';
 import MoneySaved from './MoneySaved';
 import HealthBenefits from './HealthBenefits';
 import EnvironmentalBenefits from './EnvironmentalBenefits';
+import Info from './Info';
+import User from './User';
 
 export {
   JourneyCard,
@@ -12,4 +14,6 @@ export {
   MoneySaved,
   HealthBenefits,
   EnvironmentalBenefits,
+  Info,
+  User,
 };

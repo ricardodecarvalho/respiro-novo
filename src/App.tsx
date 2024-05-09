@@ -32,9 +32,7 @@ function App() {
               <CigarettesNotSmoked daysWithoutSmoking={daysWithoutSmoking} />
               <MoneySaved daysWithoutSmoking={daysWithoutSmoking} />
               <HealthBenefits daysWithoutSmoking={daysWithoutSmoking} />
-              <EnvironmentalBenefits
-                daysWithoutSmoking={daysWithoutSmoking}
-              />
+              <EnvironmentalBenefits daysWithoutSmoking={daysWithoutSmoking} />
             </Flex>
           </Container>
         </ErrorBoundary>

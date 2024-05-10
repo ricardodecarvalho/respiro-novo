@@ -8,11 +8,11 @@ interface MoneySavedProps {
 
 const MoneySaved = ({ daysWithoutSmoking }: MoneySavedProps) => {
   return (
-    <Card variant="classic">
-      <Text as="div" weight="bold">
+    <Card variant='classic'>
+      <Text as='div' weight='bold'>
         Gastos economizados
       </Text>
-      <Text as="div" color="gray">
+      <Text as='div' color='gray'>
         {counters.moneySaved(daysWithoutSmoking)}
       </Text>
     </Card>

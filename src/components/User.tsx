@@ -1,5 +1,13 @@
 import { RocketIcon } from '@radix-ui/react-icons';
-import { Box, Button, Card, Flex, Text, TextField } from '@radix-ui/themes';
+import {
+  Button,
+  Card,
+  Flex,
+  Separator,
+  Strong,
+  Text,
+  TextField,
+} from '@radix-ui/themes';
 import { useCallback } from 'react';
 import { useCookies } from 'react-cookie';
 
@@ -35,43 +43,48 @@ const User = () => {
     []
   );
 
-  const today = new Date();
-  const formattedDate = today.toISOString().substring(0, 10);
-
   return (
-    <>
-      <Box width="100%">
-        <Card variant="classic">
-          <form onSubmit={onSubmitAllFields}>
-            <Flex gap={'3'} direction={'column'}>
-              <Text as="label" weight="bold" htmlFor="your-name" size={'6'}>
-                Como quer ser chamado?
-              </Text>
-              <TextField.Input
-                variant="classic"
-                id="name"
-                name="name"
-                size={'3'}
-              />
-              <Text as="label" weight="bold" htmlFor="lastSmoked" size={'6'}>
-                Quando fumou seu último cigarro?
-              </Text>
-              <TextField.Input
-                variant="classic"
-                id="lastSmoked"
-                name="lastSmoked"
-                size={'3'}
-                type="date"
-                defaultValue={formattedDate}
-              />
-              <Button variant="classic" size={'3'}>
-                Começar <RocketIcon />
-              </Button>
-            </Flex>
-          </form>
-        </Card>
-      </Box>
-    </>
+    <Card variant='classic' style={{ width: '100%' }}>
+      <form onSubmit={onSubmitAllFields}>
+        <Flex gap={'3'} direction={'column'}>
+          <Text as='span' weight='bold'>
+            Olá! Vamos começar?
+          </Text>
+          <Text>
+            Primeiro, <Strong>parabéns</Strong> por tomar a decisão de parar de
+            fumar. Sabemos que não é fácil, mas você irá conseguir!
+          </Text>
+          <Separator size={'4'} />
+          <Text as='label' weight='bold' htmlFor='name'>
+            Como quer ser chamado?
+          </Text>
+          <TextField.Root
+            variant='classic'
+            id='name'
+            name='name'
+            size={'3'}
+            autoComplete='off'
+            required
+          />
+
+          <Text as='label' weight='bold' htmlFor='lastSmoked'>
+            Quando fumou seu último cigarro?
+          </Text>
+          <TextField.Root
+            variant='classic'
+            id='lastSmoked'
+            name='lastSmoked'
+            size={'3'}
+            type='date'
+            required
+          />
+
+          <Button variant='classic' size={'3'}>
+            Começar <RocketIcon />
+          </Button>
+        </Flex>
+      </form>
+    </Card>
   );
 };
 

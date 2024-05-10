@@ -10,11 +10,11 @@ const CigarettesNotSmoked = ({
   daysWithoutSmoking,
 }: CigarettesNotSmokedProps) => {
   return (
-    <Card variant="classic">
-      <Text as="div" weight="bold">
+    <Card variant='classic'>
+      <Text as='div' weight='bold'>
         Cigarros deixados de fumar
       </Text>
-      <Text as="div" color="gray">
+      <Text as='div' color='gray'>
         {counters.cigarettesNotSmoked(daysWithoutSmoking)}
       </Text>
     </Card>

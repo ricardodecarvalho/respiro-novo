@@ -1,7 +1,7 @@
 {
   "background_color": "#ffffff",
   "dir": "ltr",
-  "display": "fullscreen",
+  "display": "browser",
   "name": "Respiro Novo",
   "orientation": "any",
   "scope": "/",

@@ -1,38 +1,30 @@
 import { Theme, Flex, Container } from '@radix-ui/themes';
+import { useCookies } from 'react-cookie';
 
 import '@radix-ui/themes/styles.css';
 import './assets/css/App.css';
 
-import { counters, errors } from './utils';
+import { errors } from './utils';
 import ErrorBoundary from './utils/errors/ErrorBoundary/ErrorBoundary';
-import {
-  CigarettesNotSmoked,
-  DaysWithoutSmoking,
-  EnvironmentalBenefits,
-  HealthBenefits,
-  JourneyCard,
-  MoneySaved,
-} from './components';
+import { Info, User } from './components';
 
 function App() {
-  const daysWithoutSmoking = counters.daysBetween(new Date('2024-01-06'));
+  const [cookies] = useCookies(['user']);
   return (
     <>
       <Theme
-        accentColor="indigo"
-        grayColor="gray"
-        panelBackground="translucent"
-        radius="medium"
+        accentColor='indigo'
+        grayColor='gray'
+        panelBackground='translucent'
+        radius='medium'
+        hasBackground={false}
+        appearance='light'
       >
         <ErrorBoundary onError={errors.onErrorBoundary}>
-          <Container size="4">
-            <Flex direction="column" gap="3">
-              <JourneyCard />
-              <DaysWithoutSmoking daysWithoutSmoking={daysWithoutSmoking} />
-              <CigarettesNotSmoked daysWithoutSmoking={daysWithoutSmoking} />
-              <MoneySaved daysWithoutSmoking={daysWithoutSmoking} />
-              <HealthBenefits daysWithoutSmoking={daysWithoutSmoking} />
-              <EnvironmentalBenefits daysWithoutSmoking={daysWithoutSmoking} />
+          <Container size='4'>
+            <Flex direction='column' gap='3'>
+              {!cookies.user && <User />}
+              {cookies.user && <Info userData={cookies.user} />}
             </Flex>
           </Container>
         </ErrorBoundary>

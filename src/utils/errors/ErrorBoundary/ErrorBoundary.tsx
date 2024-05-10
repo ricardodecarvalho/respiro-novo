@@ -1,4 +1,3 @@
-import { Flex } from '@radix-ui/themes';
 import { ErrorBoundary as ReactErrorBoundary } from 'react-error-boundary';
 
 export type ErrorBoundaryProps = React.PropsWithChildren<{
@@ -10,10 +9,8 @@ export default function ErrorBoundary({
   children,
 }: ErrorBoundaryProps) {
   return (
-    <Flex direction="column" gap="3" align="center" justify="center">
-      <ReactErrorBoundary fallbackRender={({ error }) => onError(error)}>
-        {children}
-      </ReactErrorBoundary>
-    </Flex>
+    <ReactErrorBoundary fallbackRender={({ error }) => onError(error)}>
+      {children}
+    </ReactErrorBoundary>
   );
 }

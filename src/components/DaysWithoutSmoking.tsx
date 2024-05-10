@@ -8,11 +8,11 @@ const DaysWithoutSmoking = ({
   daysWithoutSmoking,
 }: DaysWithoutSmokingProps) => {
   return (
-    <Card variant="classic">
-      <Text as="div" weight="bold">
+    <Card variant='classic'>
+      <Text as='div' weight='bold'>
         Dias sem fumar
       </Text>
-      <Text as="div" color="gray">
+      <Text as='div' color='gray'>
         {daysWithoutSmoking}
       </Text>
     </Card>
